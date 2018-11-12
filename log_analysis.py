@@ -23,7 +23,8 @@ def process_query(q):
         results = c.fetchall()
         db.close()
         return list(results)
-    except:
+    except Exception as e:
+        print("Error processing query !\n{}".format(e))
         return None
 
 
